@@ -16,14 +16,6 @@ Home::Home(QWidget *parent) :
     ui->tabWidget->setTabEnabled(2,false);
     ui->pushbutton_profile->hide();
     ui->pushButton_logout->hide();
-
-    ui->tableWidget->setColumnWidth(0,90);
-    ui->tableWidget->setColumnWidth(1,135);
-    ui->tableWidget->setColumnWidth(2,60);
-    ui->tableWidget->setColumnWidth(3,150);
-    ui->tableWidget->setColumnWidth(4,80);
-    ui->tableWidget->setColumnWidth(5,160);
-    ui->tableWidget->setColumnWidth(7,140);
     ui->pushButton_reset->setFocusPolicy(Qt::StrongFocus);
     connect(&m_timer,SIGNAL(timeout()),this,SLOT(message()));
 }
@@ -74,6 +66,7 @@ void Home::on_pushButton_login_clicked()
 
         if(check == adminstrator)
             ui->tabWidget->setTabEnabled(1,true);
+
         ui->tabWidget->setTabEnabled(2,true);
         ui->tabWidget->setCurrentIndex(2);
         ui->tabWidget->setTabEnabled(0,false);
@@ -88,7 +81,6 @@ void Home::on_pushButton_login_clicked()
 void Home::message()
 {
     ui->label_error->clear();
-    ui->label_adminerror->clear();
 
 }
 
@@ -183,7 +175,7 @@ void Home::deviceList()
         ui->tableWidget->setShowGrid(false);
         ui->label_0->setText( QString::number(query.size()));
         ui->tableWidget->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
-     //   ui->tableWidget->resizeRowsToContents();
+        ui->tableWidget->resizeRowsToContents();
         int index=0;
         while(query.next())
         {
@@ -231,79 +223,15 @@ void Home::on_pushButton_deselect_clicked()
 void Home::on_pushButton_adminSave_clicked()
 {
 
-
-  //  QRegularExpression regexpwd("^((?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,20})$");
-   // QRegularExpression regexmob("^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$");
-    QRegularExpression regexmob("^[7-9][0-9]{9}$");
-     QRegularExpression regexpwd("[A-Za-z0-9]{8,}$");
-
-    QRegularExpression regexemail("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$");
+    QRegularExpression regexpwd("^((?=.*\d)(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%&*]{6,20})$");
+    QRegularExpression regexmob(" ^[789]\d{9}$");
+    QRegularExpression regexxemail("\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}\\b");
     QString userid,username,pwd,usertype,mob,email;
     userid = ui->adminUserid->text();
     username = ui->adminUserName->text();
     pwd = ui->adminPassword->text();
-    usertype=ui->adminUsertype->currentText();
+    usertype = ui->adminUsertype->itemData(ui->adminUsertype->currentIndex()).toString();
     mob = ui->adminContactNo->text();
     email = ui->adminEmailId->text();
-    QPalette* palette = new QPalette();
-    palette->setColor(QPalette::WindowText,Qt::red);
-    ui->label_adminerror->setPalette(*palette);
-    if ( ui->adminUserid->text().isEmpty())
-    {
-      ui->label_adminerror->setText("Please enter UserId");
-        m_timer.start(3000);
-    }
-    else if ( ui->adminUserName->text().isEmpty())
-    {
-      ui->label_adminerror->setText("Please enter User Name");
-        m_timer.start(3000);
-    }
-   else if ( ui->adminEmailId->text().isEmpty())
-    {
-      ui->label_adminerror->setText("Please enter Email Id");
-        m_timer.start(3000);
-    }
-    else if (!(regexemail.match(email).hasMatch()))
-    {
-       ui->label_adminerror->setText("Please enter Valid Email Id");
-         m_timer.start(3000);
-    }
-    else if (ui->adminContactNo->text().isEmpty())
-    {
-       ui->label_adminerror->setText("Please enter Mobile Number");
-         m_timer.start(3000);
-    }
-   else if (!(regexmob.match(mob).hasMatch()))
-    {
-       ui->label_adminerror->setText("Please enter Valid Mobile Number");
-         m_timer.start(3000);
-    }
-    else if (ui->adminPassword->text().isEmpty())
-    {
-       ui->label_adminerror->setText("Please enter password");
-         m_timer.start(3000);
-    }
-    else if (ui->admincnfpwd->text().isEmpty())
-    {
-       ui->label_adminerror->setText("Please enter Confirm Password");
-         m_timer.start(3000);
-    }
-    else if(ui->admincnfpwd->text() != ui->adminPassword->text())
-    {
-        ui->label_adminerror->setText("Password mismatched");
-          m_timer.start(3000);
-    }
-    else if(!(regexpwd.match(pwd).hasMatch()))
-    {
-       ui->label_adminerror->setText("Passwords should contain alphabate,number and special character");
-         m_timer.start(3000);
-    }
-    else
-    {
-        dbconnection->addUser(userid, username, usertype, email,mob, pwd);
-        ui->label_adminerror->setText("User created successfully");
-        m_timer.start(3000);
-    }
-
 
 }

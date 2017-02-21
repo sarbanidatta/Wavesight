@@ -327,8 +327,8 @@ compiler_rcc_make_all: qrc_images.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) qrc_images.cpp
 qrc_images.cpp: images.qrc \
-		wavesight.svg \
-		wavesightIcon.png
+		wavesightIcon.png \
+		wavesight.svg
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name images images.qrc -o qrc_images.cpp
 
 compiler_moc_header_make_all: moc_home.cpp moc_commonconfigurationdialog.cpp moc_wifyconfigurationdialog.cpp moc_diagnostics.cpp moc_snmpconfigdialog.cpp moc_cmtools.cpp moc_multipledevices.cpp moc_userprofile.cpp

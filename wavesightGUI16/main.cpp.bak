@@ -9,7 +9,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     Home w;
-    w.setWindowIcon(QIcon(":wavesight.svg"));
+    w.show();
+  //  w.setWindowIcon(QIcon(":wavesight.svg"));
     w.showMaximized();
 
     return a.exec();

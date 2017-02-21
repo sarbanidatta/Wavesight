@@ -945,7 +945,7 @@
          </palette>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_signin">
          <attribute name="title">
@@ -992,7 +992,7 @@ color: rgb(69, 97, 255);</string>
 </string>
              </property>
              <property name="text">
-              <string>Authorization Required</string>
+              <string>Authorization Required </string>
              </property>
             </widget>
            </item>
@@ -1216,11 +1216,7 @@ color: rgb(69, 97, 255);</string>
                    </widget>
                   </item>
                   <item row="0" column="1">
-                   <widget class="QLineEdit" name="adminUserid">
-                    <property name="text">
-                     <string/>
-                    </property>
-                   </widget>
+                   <widget class="QLineEdit" name="adminUserid"/>
                   </item>
                   <item row="1" column="0">
                    <widget class="QLabel" name="label_UserName">
@@ -1300,7 +1296,7 @@ color: rgb(69, 97, 255);</string>
                    </widget>
                   </item>
                   <item row="6" column="1">
-                   <widget class="QLineEdit" name="admincnfpwd">
+                   <widget class="QLineEdit" name="d">
                     <property name="echoMode">
                      <enum>QLineEdit::Password</enum>
                     </property>
@@ -2460,7 +2456,7 @@ font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
                    <bool>false</bool>
                   </property>
                   <property name="gridStyle">
-                   <enum>Qt::SolidLine</enum>
+                   <enum>Qt::NoPen</enum>
                   </property>
                   <property name="wordWrap">
                    <bool>false</bool>

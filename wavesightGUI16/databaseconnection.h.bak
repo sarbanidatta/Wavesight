@@ -27,7 +27,6 @@ public:
     QSqlQuery extractData(QString field,QString value );
     void closeDatabase();
     void updateValue(QString table_name, QString sfield, QString value,QString cfield,QString id);
-    void addUser(QString id, QString name, QString type, QString email, QString mob, QString pwd);
 };
 
 #endif // DATABASECONNECTION_H

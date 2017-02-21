@@ -96,18 +96,4 @@ void databaseConnection::updateValue(QString table_name,QString sfield,QString v
     query.prepare(result);
     query.exec();
 }
- void databaseConnection::addUser(QString id, QString name, QString type, QString email, QString mob, QString pwd)
- {
-        QSqlQuery query;
-        query.prepare("INSERT INTO USER_TABLE (user_id, user_name, password, privileges, contact, email) "
-                      "VALUES (:id, :name, :pwd, :type, :mob, :email)");
-        query.bindValue(":id", id);
-        query.bindValue(":name", name);
-        query.bindValue(":type", type);
-        query.bindValue(":email", email);
-        query.bindValue(":pwd", pwd);
-        query.bindValue(":mob", mob);
-        query.exec();
-      //  qDebug()<<"User Added"<< id<<name<<type<<email<<  mob<<  pwd;
 
- }

@@ -20,165 +20,215 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Diagnostics
 {
 public:
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_4;
     QLabel *label_Diagnostics;
-    QWidget *layoutWidget;
-    QVBoxLayout *verticalLayout_diagnostics2;
-    QVBoxLayout *verticalLayout_diagnostics;
+    QSpacerItem *horizontalSpacer_13;
+    QHBoxLayout *horizontalLayout_5;
     QGroupBox *groupBox_NetworkUtilities;
+    QVBoxLayout *verticalLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_8;
+    QSpacerItem *horizontalSpacer_7;
     QLineEdit *lineEdit_Address;
-    QWidget *layoutWidget_2;
-    QHBoxLayout *horizontalLayout_diagnostics2;
+    QSpacerItem *horizontalSpacer_6;
+    QSpacerItem *horizontalSpacer_9;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_10;
     QPushButton *pushButton_1;
-    QSpacerItem *horizontalSpacer_3;
     QSpacerItem *horizontalSpacer;
     QPushButton *pushButton_11;
-    QSpacerItem *horizontalSpacer_2;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *pushButton_12;
-    QScrollArea *scrollArea;
-    QWidget *scrollAreaWidgetContents_2;
-    QHBoxLayout *horizontalLayout_diagnostics;
+    QSpacerItem *horizontalSpacer_14;
+    QTextEdit *diagnosticresultText;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_12;
+    QSpacerItem *horizontalSpacer_11;
     QSpacerItem *horizontalSpacer_5;
     QPushButton *pushButton_6;
     QPushButton *pushButton_5;
     QPushButton *pushButton_4;
+    QSpacerItem *verticalSpacer_2;
 
     void setupUi(QDialog *Diagnostics)
     {
         if (Diagnostics->objectName().isEmpty())
             Diagnostics->setObjectName(QStringLiteral("Diagnostics"));
         Diagnostics->resize(796, 705);
+        verticalLayout = new QVBoxLayout(Diagnostics);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         label_Diagnostics = new QLabel(Diagnostics);
         label_Diagnostics->setObjectName(QStringLiteral("label_Diagnostics"));
-        label_Diagnostics->setGeometry(QRect(20, 10, 91, 21));
         label_Diagnostics->setMaximumSize(QSize(91, 21));
         label_Diagnostics->setStyleSheet(QLatin1String("font: 75 italic 12pt \"Century Schoolbook L\"\n"
 ""));
         label_Diagnostics->setFrameShadow(QFrame::Plain);
         label_Diagnostics->setTextFormat(Qt::RichText);
         label_Diagnostics->setScaledContents(false);
-        layoutWidget = new QWidget(Diagnostics);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 30, 541, 421));
-        verticalLayout_diagnostics2 = new QVBoxLayout(layoutWidget);
-        verticalLayout_diagnostics2->setSpacing(6);
-        verticalLayout_diagnostics2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_diagnostics2->setObjectName(QStringLiteral("verticalLayout_diagnostics2"));
-        verticalLayout_diagnostics2->setContentsMargins(0, 0, 0, 0);
-        verticalLayout_diagnostics = new QVBoxLayout();
-        verticalLayout_diagnostics->setSpacing(6);
-        verticalLayout_diagnostics->setObjectName(QStringLiteral("verticalLayout_diagnostics"));
-        groupBox_NetworkUtilities = new QGroupBox(layoutWidget);
+
+        horizontalLayout_4->addWidget(label_Diagnostics);
+
+        horizontalSpacer_13 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_13);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        groupBox_NetworkUtilities = new QGroupBox(Diagnostics);
         groupBox_NetworkUtilities->setObjectName(QStringLiteral("groupBox_NetworkUtilities"));
         groupBox_NetworkUtilities->setMaximumSize(QSize(531, 141));
-        groupBox_NetworkUtilities->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
+        QFont font;
+        groupBox_NetworkUtilities->setFont(font);
+        groupBox_NetworkUtilities->setStyleSheet(QStringLiteral("font: 9pt \"Sans Serif\";"));
+        verticalLayout_2 = new QVBoxLayout(groupBox_NetworkUtilities);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_8 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_8);
+
+        horizontalSpacer_7 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_7);
+
         lineEdit_Address = new QLineEdit(groupBox_NetworkUtilities);
         lineEdit_Address->setObjectName(QStringLiteral("lineEdit_Address"));
-        lineEdit_Address->setGeometry(QRect(200, 40, 141, 22));
         lineEdit_Address->setMaximumSize(QSize(141, 22));
-        layoutWidget_2 = new QWidget(groupBox_NetworkUtilities);
-        layoutWidget_2->setObjectName(QStringLiteral("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(77, 90, 391, 31));
-        layoutWidget_2->setMaximumSize(QSize(391, 31));
-        horizontalLayout_diagnostics2 = new QHBoxLayout(layoutWidget_2);
-        horizontalLayout_diagnostics2->setSpacing(6);
-        horizontalLayout_diagnostics2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_diagnostics2->setObjectName(QStringLiteral("horizontalLayout_diagnostics2"));
-        horizontalLayout_diagnostics2->setContentsMargins(0, 0, 0, 0);
-        pushButton_1 = new QPushButton(layoutWidget_2);
+
+        horizontalLayout->addWidget(lineEdit_Address);
+
+        horizontalSpacer_6 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_6);
+
+        horizontalSpacer_9 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_9);
+
+
+        verticalLayout_2->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalSpacer_10 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_10);
+
+        pushButton_1 = new QPushButton(groupBox_NetworkUtilities);
         pushButton_1->setObjectName(QStringLiteral("pushButton_1"));
         pushButton_1->setMaximumSize(QSize(80, 21));
         pushButton_1->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics2->addWidget(pushButton_1);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_diagnostics2->addItem(horizontalSpacer_3);
+        horizontalLayout_2->addWidget(pushButton_1);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_diagnostics2->addItem(horizontalSpacer);
+        horizontalLayout_2->addItem(horizontalSpacer);
 
-        pushButton_11 = new QPushButton(layoutWidget_2);
+        pushButton_11 = new QPushButton(groupBox_NetworkUtilities);
         pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
         pushButton_11->setMaximumSize(QSize(80, 21));
         pushButton_11->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics2->addWidget(pushButton_11);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_diagnostics2->addItem(horizontalSpacer_2);
+        horizontalLayout_2->addWidget(pushButton_11);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_diagnostics2->addItem(horizontalSpacer_4);
+        horizontalLayout_2->addItem(horizontalSpacer_4);
 
-        pushButton_12 = new QPushButton(layoutWidget_2);
+        pushButton_12 = new QPushButton(groupBox_NetworkUtilities);
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
         pushButton_12->setMaximumSize(QSize(80, 21));
         pushButton_12->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics2->addWidget(pushButton_12);
+        horizontalLayout_2->addWidget(pushButton_12);
 
 
-        verticalLayout_diagnostics->addWidget(groupBox_NetworkUtilities);
-
-        scrollArea = new QScrollArea(layoutWidget);
-        scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setMaximumSize(QSize(531, 221));
-        scrollArea->setWidgetResizable(true);
-        scrollAreaWidgetContents_2 = new QWidget();
-        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 529, 219));
-        scrollArea->setWidget(scrollAreaWidgetContents_2);
-
-        verticalLayout_diagnostics->addWidget(scrollArea);
+        verticalLayout_2->addLayout(horizontalLayout_2);
 
 
-        verticalLayout_diagnostics2->addLayout(verticalLayout_diagnostics);
+        horizontalLayout_5->addWidget(groupBox_NetworkUtilities);
 
-        horizontalLayout_diagnostics = new QHBoxLayout();
-        horizontalLayout_diagnostics->setSpacing(6);
-        horizontalLayout_diagnostics->setObjectName(QStringLiteral("horizontalLayout_diagnostics"));
+        horizontalSpacer_14 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_14);
+
+
+        verticalLayout->addLayout(horizontalLayout_5);
+
+        diagnosticresultText = new QTextEdit(Diagnostics);
+        diagnosticresultText->setObjectName(QStringLiteral("diagnosticresultText"));
+        diagnosticresultText->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        diagnosticresultText->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+
+        verticalLayout->addWidget(diagnosticresultText);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalSpacer_12 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_12);
+
+        horizontalSpacer_11 = new QSpacerItem(25, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_11);
+
         horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_diagnostics->addItem(horizontalSpacer_5);
+        horizontalLayout_3->addItem(horizontalSpacer_5);
 
-        pushButton_6 = new QPushButton(layoutWidget);
+        pushButton_6 = new QPushButton(Diagnostics);
         pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
         pushButton_6->setMaximumSize(QSize(80, 21));
         pushButton_6->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics->addWidget(pushButton_6);
+        horizontalLayout_3->addWidget(pushButton_6);
 
-        pushButton_5 = new QPushButton(layoutWidget);
+        pushButton_5 = new QPushButton(Diagnostics);
         pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
         pushButton_5->setMaximumSize(QSize(80, 21));
         pushButton_5->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics->addWidget(pushButton_5);
+        horizontalLayout_3->addWidget(pushButton_5);
 
-        pushButton_4 = new QPushButton(layoutWidget);
+        pushButton_4 = new QPushButton(Diagnostics);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
         pushButton_4->setMaximumSize(QSize(80, 21));
         pushButton_4->setStyleSheet(QStringLiteral("font: 8pt \"Sans Serif\";"));
 
-        horizontalLayout_diagnostics->addWidget(pushButton_4);
+        horizontalLayout_3->addWidget(pushButton_4);
 
 
-        verticalLayout_diagnostics2->addLayout(horizontalLayout_diagnostics);
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        verticalSpacer_2 = new QSpacerItem(20, 257, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
 
 
         retranslateUi(Diagnostics);
