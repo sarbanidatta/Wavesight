@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>wavesightIcon.png</file>
+        <file>wavesight.svg</file>
+    </qresource>
+</RCC>

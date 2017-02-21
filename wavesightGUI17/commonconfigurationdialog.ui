@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CommonConfigurationDialog</class>
+ <widget class="QDialog" name="CommonConfigurationDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>764</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WaveSight | WiFy Configuration via SNMP</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Common Cofiguration&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_protocol">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>591</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Protocol Configuration</string>
+   </property>
+   <widget class="QColumnView" name="columnView">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>591</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_protocol">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>59</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Protocol</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_protocol">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>40</y>
+      <width>191</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <item>
+     <property name="text">
+      <string>DHCP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Static</string>
+     </property>
+    </item>
+   </widget>
+   <zorder>columnView</zorder>
+   <zorder>label_protocol</zorder>
+   <zorder>comboBox_protocol</zorder>
+   <zorder></zorder>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_DHCP">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>591</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>DHCP Configuration</string>
+   </property>
+   <widget class="QColumnView" name="columnView_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>591</width>
+      <height>211</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>20</y>
+      <width>176</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_dhcp_1">
+       <property name="text">
+        <string>DHCP Server IP Start</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_2">
+       <property name="text">
+        <string>DHCP Server IP End</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_3">
+       <property name="text">
+        <string>DHCP Netmask</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_4">
+       <property name="text">
+        <string>DHCP Server Gateway</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_5">
+       <property name="text">
+        <string>DHCP Server Primary DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_6">
+       <property name="text">
+        <string>DHCP Server Secondary DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_dhcp_7">
+       <property name="text">
+        <string>DHCP Server Lease Time</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>201</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_1"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_2"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_3"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_4"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_5"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_6"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_dhcp_7"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_static">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>390</y>
+     <width>591</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Static Configuration</string>
+   </property>
+   <widget class="QColumnView" name="columnView_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>591</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_static_1">
+       <property name="text">
+        <string>IPV4 Address</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_static_2">
+       <property name="text">
+        <string>IPV4 Netmask</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_static_3">
+       <property name="text">
+        <string>Gateway</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_static_4">
+       <property name="text">
+        <string>DNS Server</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>20</y>
+      <width>201</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_static_1"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_static_2"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_static_3"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_static_4"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_cancle">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>560</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_apply">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>560</y>
+     <width>80</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apply</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>groupBox_protocol</zorder>
+  <zorder>groupBox_DHCP</zorder>
+  <zorder>groupBox_static</zorder>
+  <zorder>pushButton_cancle</zorder>
+  <zorder>pushButton_apply</zorder>
+  <zorder>verticalSpacer</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
